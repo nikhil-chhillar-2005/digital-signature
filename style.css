@@ -13,13 +13,11 @@ body {
   h1 {
     text-align: center;
     color: #333;
-    margin-top: 100px;
   }
   
   .main {
     display: flex;
     justify-content: center;
-    margin-top: 70px;
   }
   .signature-pad {
     border: 2px solid #ccc;
