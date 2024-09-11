@@ -25,16 +25,25 @@
         download(dataURL, "signature.png");
       }
     });
+  colorPicker.addEventListener('change',()=>{
+    var penColor = colorPicker.value;
+    signaturePad.penColor=penColor;
+  });
+  penSizeInput.addEventListener('change',()=>{
+    var penSize = parseInt(penSizeInput.value);
+    signaturePad.minWidth = penSize;
+     signaturePad.maxWidth = penSize;
+  })
+
+    // applySettingsButton.addEventListener("click", function () {
+    //   var penColor = colorPicker.value;
+    //   var penSize = parseInt(penSizeInput.value);
+    //   alert("Applied setting successfully !!");
   
-    applySettingsButton.addEventListener("click", function () {
-      var penColor = colorPicker.value;
-      var penSize = parseInt(penSizeInput.value);
-      alert("Applied setting successfully !!");
-  
-      signaturePad.penColor = penColor;
-      signaturePad.minWidth = penSize;
-      signaturePad.maxWidth = penSize;
-    });
+    //   signaturePad.penColor = penColor;
+    //   signaturePad.minWidth = penSize;
+    //   signaturePad.maxWidth = penSize;
+    // });
   
     // Function to download the signature
     function download(dataURL, filename) {
